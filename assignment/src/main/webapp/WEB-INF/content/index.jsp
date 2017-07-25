@@ -6,7 +6,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>欢迎来到WM购物网站</title>
-
 </head>
 <body>
 <div class="container-fluid">
@@ -15,7 +14,11 @@
 			<h3 class="text-center">  
 				欢迎来到WM书城。
 			</h3> 
+			<div>
+			当前在线人数：${applicationScope.count}
+			</div>
 			<a href="main">进入商城</a>
+			<a href="change">修改密码</a>
 				<div class="col-md-6">
 					<img src=./image/5.jpg>
 					<blockquote>

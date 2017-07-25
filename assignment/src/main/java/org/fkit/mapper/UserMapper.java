@@ -12,6 +12,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectProvider;
+import org.apache.ibatis.annotations.Update;
 import org.fkit.domain.User;
 import org.fkit.mapperProvider.UserDynaSqlProvider;
 
@@ -45,11 +46,17 @@ public interface UserMapper {
 		void update(User user);
 	
 		
-		@Select("select password from tb_user where loginname = #{loginname}")
+		@Select("select password from user where loginname = #{loginname}")
 		User findPassword(@Param("loginname") String loginname);
 		
-		@Select("select * from tb_user where loginname = #{loginname} and mail = #{mail}")
+		@Select("select * from user where loginname = #{loginname} and mail = #{mail}")
 		User findPasswordEmail1(@Param("loginname") String loginname,@Param("mail") String mail);
-
+		
+		
+		/*
+		 * 修改密码
+		 */
+		@Update("update user set password=#{password} where username=#{username}")
+		void updatePassword(User user);	
 }
 

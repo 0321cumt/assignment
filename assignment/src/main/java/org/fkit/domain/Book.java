@@ -5,7 +5,8 @@ import java.util.Date;
 
 /**
  * CREATE TABLE book (
-	book_id INT (11) PRIMARY KEY AUTO_INCREMENT,
+	id INT (11) PRIMARY KEY AUTO_INCREMENT,
+	book_id INT (11),
 	book_name VARCHAR (20),
 	author VARCHAR (54),
 	price DOUBLE ,
@@ -19,6 +20,7 @@ import java.util.Date;
  * */
 public class Book implements Serializable{
 	
+	private Integer id;						//ID
 	private Integer book_id;				// book_id	
 	private String book_name;			// 书名
 	private String author;			// 作者
@@ -65,12 +67,6 @@ public class Book implements Serializable{
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-	public String getInventory() {
-		return inventory;
-	}
-	public void setInventory(String inventory) {
-		this.inventory = inventory;
-	}
 	public String getImage() {
 		return image;
 	}
@@ -98,10 +94,23 @@ public class Book implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "Book [book_id=" + book_id + ", book_name=" + book_name + ", author=" + author
+		return "Book [id=" + id + ",book_id=" + book_id + ", book_name=" + book_name + ", author=" + author
 				+ ", price=" + price + ", remark=" + remark + ", inventory=" + inventory + ","
 						+ " image=" + image +",image_a=" + image_a +",image_b=" + image_b +","
 								+ "]";
+	}
+	
+	public String getInventory() {
+		return inventory;
+	}
+	public void setInventory(String inventory) {
+		this.inventory = inventory;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 	

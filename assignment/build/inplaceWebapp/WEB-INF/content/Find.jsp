@@ -22,7 +22,7 @@
          </tr>
          <tr>
          	<td><label>你的邮箱: </label></td>
-             <td><input type="text" id="email" name="email" ></td>
+             <td><input type="text" id="mail" name="mail" ></td>
          </tr>
          <tr>
              <td><input type="submit" value="发送邮件"></td>

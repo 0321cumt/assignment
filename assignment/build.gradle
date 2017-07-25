@@ -40,6 +40,9 @@ dependencies {
 	compile group: 'javax.mail', name: 'javax.mail-api', version: '1.5.5'
 	compile group: 'org.springframework', name: 'spring-context-support', version: '4.3.7.RELEASE'
 	compile group: 'org.apache.commons', name: 'commons-email', version: '1.4'
+	compile 'junit:junit:4.12'
+	compile 'org.springframework:spring-test:4.3.3.RELEASE'
+	
 	
     testCompile 'junit:junit:4.12'
 }

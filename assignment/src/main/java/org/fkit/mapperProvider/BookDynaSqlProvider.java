@@ -49,6 +49,9 @@ public class BookDynaSqlProvider {
 					return new SQL(){
 						{
 							INSERT_INTO("book");
+							if(book.getBook_id() != null && !book.getBook_id().equals("")){
+								VALUES("book_id", "#{book_id}");
+							}
 							if(book.getBook_name() != null && !book.getBook_name().equals("")){
 								VALUES("book_name", "#{book_name}");
 							}
@@ -85,6 +88,9 @@ public class BookDynaSqlProvider {
 						return new SQL(){
 							{
 								UPDATE("book");
+								if(book.getBook_id() != null){
+									SET(" book_id= #{book_id} ");
+								}
 								if(book.getBook_name() != null){
 									SET(" book_name = #{book_name} ");
 								}
@@ -114,7 +120,7 @@ public class BookDynaSqlProvider {
 								}
 								
 								
-								WHERE(" book_id = #{book_id} ");
+								WHERE(" id = #{id} ");
 							}
 						}.toString();
 					}

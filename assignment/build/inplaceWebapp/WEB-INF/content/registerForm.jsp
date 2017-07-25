@@ -35,6 +35,10 @@
              <td><input type="text" id="address" name="address" ></td>
          </tr>
          <tr>
+         	<td><label>邮箱: </label></td>
+             <td><input type="text" id="mail" name="mail" ></td>
+         </tr>
+         <tr>
              <td><input type="submit" value="注册"></td>
          </tr>
      </table>

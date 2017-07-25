@@ -62,11 +62,12 @@
                                         <ins>￥：${book.price}</ins> 
                                     </div>    
                                     
-                                    <form action="" class="cart">
+                                    <form action="saveCollect"  class="cart">
                                         <div class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>
-                                        <input type=button class="add_to_cart_button" value="加入购物车" onclick="window.location.href='Cart.jsp';"/>
+                                        <p><a href="save?book_id=${book.id }" role="botton">加入购物车</a></p>
+                                        <p><a href="saveCollect?book_id=${book.id }&loginname=${user.loginname}&image=${book.image}&book_name=${book.book_name}&price${book.price}" role="botton">收藏商品</a></p>
                                     </form>   
                                 </div>
                             </div>

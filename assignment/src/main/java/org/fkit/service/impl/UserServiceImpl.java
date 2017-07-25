@@ -55,5 +55,11 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
+	@Override
+	public void updatePassword(User user) {
+		userMapper.updatePassword(user);
+}
 
 }

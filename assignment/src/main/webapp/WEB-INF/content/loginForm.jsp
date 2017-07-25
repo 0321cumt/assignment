@@ -14,7 +14,7 @@
 </head>
 <body>
 <h3>登录页面</h3>
-<form action="login" method="post">
+<form action="login" id="loginForm" method="post">
 	<font color="red">${requestScope.message }</font>
      <table>
          <tr>
@@ -27,7 +27,7 @@
          </tr>
          <tr>
     			<td><label>
-    			<input  type="checkbox" onclick="remember();">
+    			<input  type="checkbox" id="remember" name="remember">
     			记住密码  </label>
     			</td>
 		</tr>
@@ -39,5 +39,8 @@
          </tr>
      </table>
 </form>
+<script src="js/bootstrap2.js"></script>
+<script src="js/rememberpwd.js"></script>
+
 </body>
 </html>

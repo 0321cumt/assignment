@@ -5,12 +5,13 @@ import java.io.Serializable;
 /**
  * CREATE TABLE user(
 user_id INT PRIMARY KEY AUTO_INCREMENT,      #id
-loginname VARCHAR(20) UNIQUE,		#登录名  邮箱
+loginname VARCHAR(20) UNIQUE,		#登录名  
 password VARCHAR(20),			#密码
 user_name VARCHAR(20),			#用户名
 phone VARCHAR(20),			#电话
 address VARCHAR(225),       #地址
 );
+
  * */
 public class User implements Serializable{
 
@@ -20,7 +21,7 @@ public class User implements Serializable{
 	private String password;	// 密码
 	private String phone;		// 电话
 	private String address;		//地址
-	
+	private String mail;		//邮箱
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -55,9 +56,6 @@ public class User implements Serializable{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	
-
 	public String getPhone() {
 		return phone;
 	}
@@ -73,14 +71,22 @@ public class User implements Serializable{
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
 		
 	
 	@Override
 	public String toString() {
 		return "User [user_id=" + user_id + ", loginname=" + loginname + ", username=" + username + ",password="
-				+ password + ",  phone=" + phone + ", address=" + address + "]";
+				+ password + ",  phone=" + phone + ", address=" + address + ",mail=" + mail + "]";
 	}
+
+	
 
 	
 	

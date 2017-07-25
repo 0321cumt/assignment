@@ -12,8 +12,7 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/responsive.css">
 
 </head>
 <body>
@@ -37,8 +36,9 @@
                         <li class="active"><a href="main">WM商城</a></li>
                         <li ><a href="Education">教育类图书</a></li>
                         <li><a href="Art">文艺类图书</a></li>
-                        <li><a href="Cart">购物车</a></li>
-                        <li><a href="Order">order</a></li>
+                        <li><a href="cartForm">购物车</a></li>
+                        <li><a href="collectForm">我的收藏</a></li>
+                        <li><a href="index">返回首页</a></li>
                     </ul>
                 </div>  
             </div>
@@ -55,7 +55,7 @@
                         	<img src="image/${book.image }"  width="250px" height="300px">
                         </div>
                         	<h2><font><font>
-								书名：<a href="bookdetail?book_id=${book.book_id}">${book.book_name}</a>
+								书名：<a href="bookdetail?id=${book.id}">${book.book_name}</a>
 							</font></font></h2>
                         <div class="product-carousel-price">
                          	<font><font>
@@ -63,7 +63,7 @@
 							</font></font>
                         </div> 
                          <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="Cart.jsp">加入购物车</a>
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="save?book_id=${book.id }">加入购物车</a>
                         </div> 
                      </div>
                  </div>

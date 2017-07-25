@@ -60,9 +60,9 @@ public class BookServiceImpl implements BookService {
 	
 	
 	@Override
-	public Book getbookdetail(Integer book_id) {
+	public Book getbookdetail(Integer id) {
 		// TODO Auto-generated method stub
-		return bookMapper.findbookdetail(book_id);
+		return bookMapper.findbookdetail(id);
 	}
 
 	

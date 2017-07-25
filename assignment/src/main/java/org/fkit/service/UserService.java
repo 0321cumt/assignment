@@ -26,5 +26,11 @@ public interface UserService {
 	
 	User findPassword(String loginname);
 	User findPasswordEmail(String loginname,String mail);
+	
+	
+	/**
+	 * 用户更改密码
+	 */
+	void updatePassword(User user);
 
 }

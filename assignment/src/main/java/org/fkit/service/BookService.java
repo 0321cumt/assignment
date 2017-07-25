@@ -32,7 +32,7 @@ public interface BookService {
 	 * 查找选择详情商品
 	 * @return Book选择详情对象集合
 	 */
-	 Book getbookdetail(Integer book_id);
+	 Book getbookdetail(Integer id);
 		// TODO Auto-generated method stub
 		
 	/**
